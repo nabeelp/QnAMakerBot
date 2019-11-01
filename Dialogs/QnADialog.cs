@@ -90,9 +90,9 @@ namespace QnAMakerBot.Dialogs
                 }
             }
 
-            if (highConfidenceResults.Count == 1)
+            if (highConfidenceResults.Count >= 1)
             {
-                // only one match found
+                // take the first high confidence match found
                 var qnaAnswer = highConfidenceResults[0].Answer;
                 var prompts = highConfidenceResults[0].Context?.Prompts;
                 var qnaId = highConfidenceResults[0].Id;
